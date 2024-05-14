@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@to-do-list/miniapp": ["apps/mini-app-list/src/app/App.tsx"]
+      "@to-do-list/miniapp": ["app-to-do-list/mini-apps/mini-app-list/src/app/App.tsx"]
     }
   },
   "exclude": ["node_modules", "tmp"]

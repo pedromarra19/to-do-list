@@ -15,7 +15,7 @@ const Home = ({navigation}) => {
 
   return (
       <View style={styles.container}>
-          <Text>Home</Text>
+          <Text style={styles.title}>Home</Text>
           <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('MiniApp')}>
               <Text style={styles.textButton}>To do List</Text>
           </TouchableOpacity>
@@ -28,6 +28,12 @@ const styles = StyleSheet.create({
       flex:  1,
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    title:{
+      position: 'absolute',
+      top: 32,
+      fontSize: 32,
+      color: '#000',
     },
     button: {
       padding: 24,

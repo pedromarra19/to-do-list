@@ -34,12 +34,12 @@ export const App = () => {
 
   
   const renderItem = ({ item }) => (
-    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+    <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
     
       <TouchableOpacity
         testID="checkbox"
         onPress={() => isChecked(item.id)}  
-        style={item.checkbox === false ? styles.abledCheckBox : styles.disabledCheckBox}
+        style={item.checkbox === false ? styles.disabledCheckBox : styles.abledCheckBox}
       >
       <Text style={styles.checkIcon}>✔</Text>
       </TouchableOpacity>
@@ -49,7 +49,7 @@ export const App = () => {
         style={{marginTop: 12, marginLeft: 16}} 
         onPress={() =>  removeFromList(item.id)}
       >
-        <Text style={{fontSize: 24}}>x</Text>
+        <Text style={{fontSize: 20, color: 'red'}}>x</Text>
       </TouchableOpacity>
     </View>
   );
@@ -89,13 +89,18 @@ const styles = StyleSheet.create({
     title: {
       fontSize: 32,
       marginTop: 24,
+      color: '#000',
     },
     input: {
-      padding: 16,
-      paddingHorizontal: 120,
+      height: 50,
+      width: 280,
       backgroundColor: '#fff',
       borderRadius: 24,
       marginTop: 32,
+      fontSize: 16,
+      paddingHorizontal: 30,
+      borderColor: '#000',
+      borderWidth: 1
     },
     addButton: {
       padding: 10,
@@ -116,33 +121,37 @@ const styles = StyleSheet.create({
       fontSize: 20,
     },
     list: {
-      marginTop: 20
+      marginTop: 20,
     },
     item: {
       marginTop: 10,
-      fontSize: 32
-    },
-    abledCheckBox:{
-      marginRight: 8,
-      marginTop: 12,
-      padding: 10,
-      borderColor: "#000",
-      borderWidth: 2,
-      borderRadius: 6,
-      backgroundColor: '#fff'
+      fontSize: 26,
+      color: '#000'
     },
     disabledCheckBox:{
       marginRight: 8,
       marginTop: 12,
-      padding: 10,
+      height: 25,
+      width: 25,
       borderColor: "#000",
       borderWidth: 2,
       borderRadius: 6,
-      backgroundColor: '#000'
+      backgroundColor: '#fff',
+    },
+    abledCheckBox:{
+      marginRight: 8,
+      marginTop: 12,
+      height: 25,
+      width: 25,
+      borderColor: "#000",
+      borderWidth: 2,
+      borderRadius: 6,
+      backgroundColor: '#000',
+      alignItems: 'center'
     },
     checkIcon: {
       color: '#fff', 
-      fontSize: 12, 
+      fontSize: 14, 
     }
 });
 

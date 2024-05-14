@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import Routes from '../index';
 import Home from '../../Screens/Home';
-import App from '../../../mini-apps/mini-app-list/src/app/App';
+import App from '@to-do-list/miniapp';
 
 describe('Routes', () => {
   it('renders Home screen by default', () => {
