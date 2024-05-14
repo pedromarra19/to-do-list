@@ -34,7 +34,7 @@ export const App = () => {
 
   
   const renderItem = ({ item }) => (
-    <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
+    <View style={styles.renderItem}>
     
       <TouchableOpacity
         testID="checkbox"
@@ -46,7 +46,7 @@ export const App = () => {
       <Text style={styles.item}>{item.text}</Text>
       <TouchableOpacity 
         testID="remove-button" 
-        style={{marginTop: 12, marginLeft: 16}} 
+        style={styles.removeButton} 
         onPress={() =>  removeFromList(item.id)}
       >
         <Text style={{fontSize: 20, color: 'red'}}>x</Text>
@@ -152,6 +152,15 @@ const styles = StyleSheet.create({
     checkIcon: {
       color: '#fff', 
       fontSize: 14, 
+    },
+    removeButton: {
+      marginTop: 12, 
+      marginLeft: 16
+    },
+    renderItem: {
+      flexDirection: 'row', 
+      justifyContent: 'flex-start', 
+      alignItems: 'center'
     }
 });
 
